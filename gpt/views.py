@@ -9,7 +9,7 @@ class OpenAIGPTView(APIView):
 
    def get(self, request):
        input = request.GET.get('q')
-       openai.api_key = "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"
+       openai.api_key = ""
        completion = openai.ChatCompletion.create(
        model="gpt-3.5-turbo", 
        messages=[{"role": "user", "content": input}]
